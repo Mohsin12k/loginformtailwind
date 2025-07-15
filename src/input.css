@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@layer utilities {
+  .text-shadow {
+    text-shadow: 0 5px 5px #4ade80;
+  }
+  .text-shadow-lg {
+    text-shadow: 0 5px 10px #4ade80;
+  }
+  .text-shadow-none {
+    text-shadow: none;
+  }
+
+  .rotate-after-720deg {
+    animation: rotateAfter 0.5s ease-out;
+}
+.rotate-before-720deg {
+    animation: rotateBefore 0.5s ease-out;
+}
+  /* Inside your global CSS */
+.transition-height {
+  transition: height 0.5s ease-out;
+}
+
+.transition-show {
+  transition: all 0.5s ease-out ;
+}
+
+}
+
+@keyframes rotateAfter {
+    from {
+        transform: rotate(0);
+    }
+    to {
+        transform: rotate(720deg);
+    }
+}
+
+@keyframes rotateBefore {
+    from {
+        transform: rotate(0);
+    }
+    to {
+        transform: rotate(-720deg);
+    }
+}
